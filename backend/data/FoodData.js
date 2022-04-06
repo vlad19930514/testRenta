@@ -1,5 +1,5 @@
 
-const foodData =[
+export const foodData =[
     {foodName:'Бургеры',
     products:[{
             name:"Big mac",

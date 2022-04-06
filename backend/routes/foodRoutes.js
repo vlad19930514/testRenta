@@ -6,7 +6,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 const router = express.Router()
 import Food from '../models/foodModel.js'
-
+import {foodData} from '../data/FoodData.js'
 
 
 
@@ -19,7 +19,9 @@ connectDB()
 router.get('/',asyncHandler( async (req,res)=>{
     const food =await Food.find({})
     console.log(food)
-    res.json(food)
+
+    res.json(foodData)
+    /* res.json(food) */
 }))
 router.post('/sent-cart',asyncHandler( async (req,res)=>{
    function resp() {
