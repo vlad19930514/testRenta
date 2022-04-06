@@ -27,6 +27,7 @@ dispatch({
   payload:res
 })
     } catch (err){
+      console.log(err)
       dispatch({
         type:ActionType.SEARCH_FOOD_ERROR,
         payload:`err ${err}`

@@ -18,6 +18,7 @@ connectDB()
 
 router.get('/',asyncHandler( async (req,res)=>{
     const food =await Food.find({})
+    console.log(food)
     res.json(food)
 }))
 router.post('/sent-cart',asyncHandler( async (req,res)=>{
