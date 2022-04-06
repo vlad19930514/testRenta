@@ -1,0 +1,19 @@
+.food-section-item{
+ 
+ &:nth-child(odd){
+background-color: #F7F6F5;
+.foodItem:hover{
+  background: white;
+  h4{
+    color: #000000;
+  }
+}
+ }
+ &:nth-child(even){
+
+  .foodItem:hover{
+    background: #F7F6F5;
+  
+  }
+   }
+}
