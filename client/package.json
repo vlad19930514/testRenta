@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "proxy": "http://localhost:5003",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "@types/react-dom": "^17.0.14",
     "axios": "^0.21.4",
     "formik": "^2.2.9",
+    "http-proxy-middleware": "^0.19.1",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
