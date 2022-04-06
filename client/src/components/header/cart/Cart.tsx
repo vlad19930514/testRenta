@@ -13,10 +13,13 @@ export default function Cart() {
 const {sentCartToServer,needSubmitAction}= useActions()
 
 const sentToServer=()=>{
-  if(!needSubmitDelivery&&delivery){ 
-    needSubmitAction(true)
+  if(!needSubmitDelivery&&delivery){  // в форме не указан адрес.
+    needSubmitAction(true) // включит тул тип адреса
+  }else if(!delivery&&products[0]){ // самовывоз и есть товар
+    sentCartToServer(products,adress!)
   }else{
-    adress&&sentCartToServer(products,adress)
+    //Если указан адрес и есть хоть один товар
+    adress&&products[0]&&sentCartToServer(products,adress)
   }
   
 }

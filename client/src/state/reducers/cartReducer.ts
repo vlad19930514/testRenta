@@ -42,7 +42,7 @@ switch(action.type){
   newPayload.quantity=1
   newArr.push(newPayload)
   }
-  return {loading:false, error:null, products:newArr }
+  return {loading:false, error:null, products:newArr, adress:state.adress }
 
   case CartType.DELETE:
     let newArrDel:IFoodItemWithQuantity[] =state.products
@@ -60,14 +60,14 @@ switch(action.type){
       return needDel
     }
     )
-    return {loading:false, error:null, products:newArrDel }
+    return {loading:false, error:null, products:newArrDel, adress:state.adress }
     case CartType.DELETE_CART:
     
-      return {loading:false, error:null, products:[]}
+      return {loading:false, error:null, products:[], adress:state.adress}
    
   
     case CartType.ADD_ADDRESS:
-      return {loading:true, error:null, adress:action.payload, products:[] }
+      return {loading:false, error:null, adress:action.payload, products:state.products }
   default: 
     return state;
 }
