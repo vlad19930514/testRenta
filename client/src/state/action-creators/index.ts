@@ -20,7 +20,7 @@ export const searchFood = ()=>{
     })
 
     try {
-      const {data}:IFoodResp = await axios.get('http://localhost:5003/food')
+      const {data}:IFoodResp = await axios.get('/food')
 const res = data.map((result)=>{ return result})
 dispatch({
   type: ActionType.SEARCH_FOOD_SUCCESS,

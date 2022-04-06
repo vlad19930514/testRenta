@@ -14,7 +14,7 @@ export const sentCartToServer = (term:IFoodItemWithQuantity[],address:string)=>{
       type:CartType.SENT
     })
     //@ts-ignore
-    await axios.post('http://localhost:5003/food/sent-cart', {
+    await axios.post('/food/sent-cart', {
         items: term,
         address
       }).then(function (response) {
